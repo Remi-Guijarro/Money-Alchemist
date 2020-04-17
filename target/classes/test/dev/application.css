@@ -1,0 +1,32 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.linear-grad {
+	-fx-background-color: linear-gradient(to bottom left,#e3821b,#d1be32, #ffe100);
+}
+
+.button1{
+	-fx-background-color: #ebb410;
+	-fx-text-fill: #fff;
+}
+
+.button2 {
+	-fx-background-color: #EBC34D;
+	-fx-border-radius: 30px;
+	-fx-text-fill: #fff;
+}
+
+.highlited-text {
+	-fx-text-fill: #ebb410;
+}
+
+.title{
+	-fx-text-fill: #ebb410;
+	-fx-font-size: 25px;
+	-fx-font-weight: bold;
+}
+
+.moneyAlchimist-title{
+	-fx-text-fill: #fff;
+	-fx-font-size: 25px;
+	-fx-font-family: Gargi;
+}
