@@ -14,6 +14,7 @@ public class Main extends Application {
 	
 	private static double yOffset = 0;
 	private static double xOffset = 0;
+	private static Stage stage;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -32,6 +33,7 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
+			stage = primaryStage; 
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -48,5 +50,9 @@ public class Main extends Application {
 	
 	public static double getYOffset() {
 		return yOffset;
+	}
+	
+	public static Stage getStage() {
+		return stage;
 	}
 }
