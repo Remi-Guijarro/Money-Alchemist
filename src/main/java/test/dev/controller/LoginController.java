@@ -12,6 +12,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import test.dev.Main;
+import test.dev.model.services.alert.AlertService;
+import test.dev.model.services.validators.ValidatorService;
+import test.dev.model.services.validators.ValidatorService.VerificationType;
 
 public class LoginController implements Initializable{
 
@@ -22,10 +25,22 @@ public class LoginController implements Initializable{
 	private Circle btnMin;
 	
 	@FXML
+	private Label alertZoneSignUp;
+	
+	@FXML
+	private Label alertZoneLogin;
+	
+	@FXML
 	private TextField signInMailTextField;
 	
 	@FXML
 	private TextField signInPasswordTextField;
+	
+	@FXML
+	private TextField signUpMailTextField;
+	
+	@FXML
+	private TextField signUpPasswordTextField;
 	
 	@FXML
 	private Label forgotPasswordBtn;
@@ -57,6 +72,24 @@ public class LoginController implements Initializable{
 	@FXML 
 	private void handleForgotPassword() {
 		
+	}
+	
+	@FXML
+	private void handleCreateAccount() {
+		signInPage.toFront();
+	}
+	
+	@FXML
+	private void handleSignUp() {
+		if(ValidatorService.checkTextField(signUpMailTextField, VerificationType.LOGIN_TEXTFIELD,alertZoneSignUp)
+			&& ValidatorService.checkTextField(signUpPasswordTextField, VerificationType.PASSWORD_TEXTFIELD,alertZoneSignUp)) {
+			handleBackToLogin();
+		}
+	}
+	
+	@FXML
+	private void handleBackToLogin() {
+		logInPage.toFront();
 	}
 	
 

@@ -30,3 +30,17 @@
 	-fx-font-size: 25px;
 	-fx-font-family: Gargi;
 }
+
+.danger{
+	-fx-background-color: #ee4747;
+	-fx-text-fill: fff;
+	-fx-border-radius: 10px;
+	-fx-background-radius : 10px;
+}
+
+.warning{
+	-fx-background-color: #FF9A00;
+	-fx-background-radius : 10px;
+	-fx-text-fill: fff;
+	-fx-border-radius: 10px;
+}
